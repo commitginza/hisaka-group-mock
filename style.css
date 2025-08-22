@@ -1148,9 +1148,6 @@ footer a {
   .services-modern {
     padding: 1rem
   }
-  .services-modern .service-card{
-    min-height: auto;
-  }
   .services-modern .service-card .card-meta{
     padding: 1.5rem;   /* 既存指定を尊重 */
     background: linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 60%);
@@ -4233,5 +4230,6 @@ nav ul,
 /* ====== 会長セクションの背景が他セクションに被らないよう隔離 ====== */
 #chairman-message{ position: relative; isolation: isolate; }
 #chairman-message .message-hero__bg{ z-index: -1; } /* セクション内だけの背景に固定 */
+
 
 
