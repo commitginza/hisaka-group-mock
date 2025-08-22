@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root {
   --color-bg: #f8f7f5;
@@ -8,8 +8,8 @@
   --color-primary: #004236;
   --color-accent: #a88946;
   --color-link: #004236;
-  --font-heading: 'Noto Serif JP', '游明朝', 'Yu Mincho', 'Hiragino Mincho ProN', 'BIZ UDMincho', serif;
-  --font-body: 'Noto Serif JP', '游明朝', 'Yu Mincho', 'Hiragino Mincho ProN', 'BIZ UDMincho', serif;
+  --font-heading: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'BIZ UDPGothic', sans-serif;
+  --font-body:    'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'BIZ UDPGothic', sans-serif;
   --container-max: 1360px;
   --radius: .75rem;
   --shadow-elevated: 0 8px 20px rgba(0, 0, 0, .06);
@@ -3947,10 +3947,63 @@ form button.btn {
   }
 }
 
+/* ====== Gothic Tone Up for Foundation ====== */
 
+/* 本文は読みやすさ重視：やや広めの行間＋デバイス差を吸収 */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.01em; /* 日本語は詰め過ぎない */
+}
 
+/* 見出しは黒太字＆わずかに詰めて力強さを出す */
+h1, h2, h3, h4, h5, h6,
+.heading-main, .section-title, .section-heading,
+.hero-title, .card-title, .venue-name {
+  font-family: var(--font-heading);
+  font-weight: 900;              /* Black */
+  letter-spacing: 0.01em;        /* 日本語は-は使わず軽く */
+  line-height: 1.15;             /* ぐっと締める */
+}
 
+/* 英字・数字が混じる場合の視認性向上（必要なら） */
+.heading-main, .hero-title, .card-title {
+  font-feature-settings: "palt" 1; /* プロポーショナル詰め（日本語対応ブラウザで効く） */
+}
 
+/* ヒーローの主見出しを一段と太く・くっきり */
+.hero-title {
+  text-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
 
+/* セクション大見出し：インパクト強調 */
+.heading-main {
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+}
 
+/* カード見出し：視線誘導のためサイズアップ＆余白微調整 */
+.card-title {
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  margin-bottom: .4rem;
+}
 
+/* ヒーローのリードと汎用リードは読みやすく */
+.hero-lead, .lead, .card-text {
+  font-weight: 500;  /* ゴシックは500が読みやすい */
+  letter-spacing: 0.01em;
+}
+
+/* 大きな英字背景（.heading-bg）は明朝前提でもOKだが線をクリーンに */
+.heading-bg {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+/* ナビやボタン類は500〜600でUIの視認性UP */
+.primary-nav a,
+nav ul,
+.btn, .card-btn, .filter-btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
