@@ -4200,3 +4200,6 @@ nav ul,
   #chairman-message .message-hero__photo{ margin-inline:auto; max-width:420px; }
 }
 
+.rich-text--full-width-cta {
+  text-align:center;
+}
