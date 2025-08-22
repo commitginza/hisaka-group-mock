@@ -4007,3 +4007,16 @@ nav ul,
   font-family: var(--font-heading);
   font-weight: 600;
 }
+
+.synergy-diagram picture,
+.synergy-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* レイアウトシフト対策。width/height を入れているなら不要 */
+.synergy-diagram img {
+  aspect-ratio: 3 / 2; /* 画像実サイズと合わせる */
+  object-fit: contain;
+}
