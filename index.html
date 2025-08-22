@@ -93,52 +93,18 @@
 
         <!-- シンプルな相関図（任意：必要に応じてCSSで装飾） -->
         <figure class="synergy-diagram-figure">
+          <figure class="synergy-diagram-figure">
           <figcaption class="sr-only">医療を中心に、予防・教育、スポーツ、文化・ライフスタイルを循環させる図</figcaption>
-          <div class="synergy-diagram">
-            <svg viewBox="0 0 420 280" width="100%" preserveAspectRatio="xMidYMid meet" aria-label="Foundation Mission Diagram">
-              <defs>
-                <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L6,3 L0,6 Z"></path>
-                </marker>
-              </defs>
-              <g transform="translate(210,60)">
-                <circle r="50" class="node-circle"></circle>
-                <text text-anchor="middle" class="node-label">
-                  <tspan x="0" dy="-4">医療</tspan>
-                  <tspan x="0" dy="20" class="node-sub">日坂会</tspan>
-                </text>
-              </g>
-              <g transform="translate(60,160)">
-                <circle r="45" class="node-circle"></circle>
-                <text text-anchor="middle" class="node-label">
-                  <tspan x="0" dy="-4">予防・教育</tspan>
-                  <tspan x="0" dy="20" class="node-sub">歯の寿命をのばす会</tspan>
-                </text>
-              </g>
-              <g transform="translate(210,220)">
-                <circle r="45" class="node-circle"></circle>
-                <text text-anchor="middle" class="node-label">
-                  <tspan x="0" dy="-4">スポーツ</tspan>
-                  <tspan x="0" dy="20" class="node-sub">フットボールアシスト</tspan>
-                </text>
-              </g>
-              <g transform="translate(360,160)">
-                <circle r="45" class="node-circle"></circle>
-                <text text-anchor="middle" class="node-label">
-                  <tspan x="0" dy="-4">文化・ライフスタイル</tspan>
-                  <tspan x="0" dy="20" class="node-sub">コミット銀座 / cielo8</tspan>
-                </text>
-              </g>
-
-              <!-- 矢印 -->
-              <line x1="210" y1="110" x2="100" y2="150" class="link" marker-end="url(#arrow)"></line>
-              <line x1="210" y1="110" x2="320" y2="150" class="link" marker-end="url(#arrow)"></line>
-              <line x1="210" y1="110" x2="210" y2="175" class="link" marker-end="url(#arrow)"></line>
-              <line x1="100" y1="150" x2="210" y2="110" class="link" marker-end="url(#arrow)"></line>
-              <line x1="320" y1="150" x2="210" y2="110" class="link" marker-end="url(#arrow)"></line>
-              <line x1="210" y1="175" x2="210" y2="110" class="link" marker-end="url(#arrow)"></line>
-            </svg>
-          </div>
+          <picture class="synergy-diagram">
+            <source type="image/avif" srcset="mission-diagram.avif 1x, mission-diagram@2x.avif 2x">
+            <source type="image/webp" srcset="mission-diagram.webp 1x, mission-diagram@2x.webp 2x">
+            <img
+              src="mission-diagram.png"
+              srcset="mission-diagram.png 1x, mission-diagram@2x.png 2x"
+              width="1200" height="800"
+              alt="医療・予防・スポーツ・文化が循環する関係図"
+              loading="lazy" decoding="async">
+          </picture>
         </figure>
       </section>
     </section>
@@ -351,3 +317,4 @@
   </footer>
 </body>
 </html>
+
