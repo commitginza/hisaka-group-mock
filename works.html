@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>実績｜Commit Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+  <header class="site-header">
+    <div class="header-top">
+      <label for="burger-toggle" class="burger" aria-label="menu">
+        <span>
+        </span>
+      </label>
+      <div class="brand">
+        <a href="index.html">
+          <img src="commit-group-logo.png" alt="Commit Group logo">
+        </a>
+      </div>
+    </div>
+    <nav class="primary-nav">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="drawer">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <label for="burger-toggle" class="drawer-overlay" aria-hidden="true">
+  </label>
+  <main>
+    <section class="page-hero page-hero--about">
+      <div class="page-hero__bg" style="background-image:url(works-hero.jpg);">
+      </div>
+      <div class="container">
+        <ul class="page-hero__breadcrumb">
+          <li>実績</li>
+        </ul>
+        <h1 class="page-hero__title">Works</h1>
+        <p class="page-hero__lead">株式会社コミットは日本国内で販売促進サービスを提供する事業会社です。</p>
+      </div>
+    </section>
+    <section id="cases" class="section cases">
+      <h2 class="section-title">実績一覧</h2>
+      <div class="case-filter">
+        <button class="filter-btn is-active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="career">キャリア支援</button>
+        <button class="filter-btn" data-filter="space">空間演出</button>
+      </div>
+      <div class="case-grid">
+        <div class="case-item" data-category="career">
+          <img src="img/case_career01.jpg" alt="">
+          <h3>プロサッカー選手セカンドキャリア支援</h3>
+        </div>
+        <div class="case-item" data-category="space">
+          <img src="img/case_space01.jpg" alt="">
+          <h3>ホテルロビー フラワー演出</h3>
+        </div>
+      </div>
+    </section>
+    <script>
+  const buttons = document.querySelectorAll('.filter-btn');
+    const items   = document.querySelectorAll('.case-item');
+  
+    buttons.forEach(btn => btn.addEventListener('click', e => {
+      const filter = e.target.dataset.filter;
+      buttons.forEach(b => b.classList.remove('is-active'));
+      e.target.classList.add('is-active');
+      items.forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.style.display = show ? 'block' : 'none';
+      });
+    }));
+    </script>
+    <section id="kpi" class="section kpi">
+      <h2 class="section-title">数字で見る実績</h2>
+      <div class="kpi-cards">
+        <div class="kpi-card">
+          <span class="kpi-number" data-count="12100"></span>
+          <p class="kpi-label">年間時計取扱本数</p>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-number" data-count="98"></span>
+          <span class="unit">%</span>
+          <p class="kpi-label">顧客満足度</p>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-number" data-count="32"></span>
+          <p class="kpi-label">国際取引国数</p>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-number" data-count="24.1"></span>
+          <span class="unit">B</span>
+          <p class="kpi-label">年間グループ売上（円）</p>
+        </div>
+      </div>
+    </section>
+    <script>
+  const nums = document.querySelectorAll('.kpi-number');
+    nums.forEach(el => {
+      const target = +el.dataset.count;
+      let current  = 0;
+      const step   = target / 60;          // 約1秒 (60fps) で到達
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(current).toLocaleString();
+      }, 16);
+    });
+    </script>
+    <section id="voices" class="section voices">
+      <h2 class="section-title">お客様の声・インタビュー</h2>
+      <div class="voice-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXX" title="Customer Interview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="voice-slider">
+        <blockquote class="voice-quote">
+          <p>「購入からメンテナンスまで一貫対応で安心。
+            <br>提案されたフラワーギフトも妻に大好評でした！」</p>
+          <cite>— 40代 男性 / 会社経営</cite>
+        </blockquote>
+        <blockquote class="voice-quote">
+          <p>「引退後のキャリア相談で時計の資産価値も学べた。
+            <br>セカンドキャリアの不安が解消しました。」</p>
+          <cite>— 元プロサッカー選手</cite>
+        </blockquote>
+      </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+  $('.voice-slider').slick({
+      autoplay: true,
+      dots: true,
+      arrows: false,
+      adaptiveHeight: true
+    });
+    </script>
+  </main>
+  <footer class="footer-dark-custom">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/commit-group-logo.png?v=1754373673" alt="Commit Group" class="footer-logo">
+      </div>
+      <div class="footer-sns-grid">
+        <div>
+          <span class="sns-label">コミット銀座</span>
+          <div class="sns-block">
+            <a href="https://x.com/commit_ginza" aria-label="Commit Ginza on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/commit_ginza" aria-label="Commit Ginza on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">フットボールアシスト</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">大津祐樹</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">Cielo8</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="about.html">会社概要</a>
+          </li>
+          <li>
+            <a href="service.html">事業紹介</a>
+          </li>
+          <li>
+            <a href="works.html">掲載実績</a>
+          </li>
+          <li>
+            <a href="news.html">ニュース</a>
+          </li>
+          <li>
+            <a href="recruit.html">採用情報</a>
+          </li>
+          <li>
+            <a href="contact.html">お問い合わせ</a>
+          </li>
+          <li>
+            <a href="terms.html">利用規約</a>
+          </li>
+          <li>
+            <a href="privacy.html">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </nav>
+      <small class="footer-copy">©
+        <script>
+  document.write(new Date().getFullYear())
+        </script> Commit Group Ltd.</small>
+    </div>
+  </footer>
+</body>
+</html>

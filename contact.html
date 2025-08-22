@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>お問い合わせ｜Commit Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+  <header class="site-header">
+    <div class="header-top">
+      <label for="burger-toggle" class="burger" aria-label="menu">
+        <span>
+        </span>
+      </label>
+      <h1 class="brand">
+        <a href="index.html">
+          <img src="commit-group-logo.png" alt="Commit Group logo">
+        </a>
+      </h1>
+    </div>
+    <nav class="primary-nav">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="drawer">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <label for="burger-toggle" class="drawer-overlay" aria-hidden="true">
+  </label>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <ul class="page-hero__breadcrumb">
+          <li>お問い合わせ</li>
+        </ul>
+        <h1 class="page-hero__title">Contact</h1>
+        <p class="page-hero__lead">株式会社コミットは日本国内で販売促進サービスを提供する事業会社です。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" data-animate>
+        <form action="/send" method="post">
+          <div class="form-row">
+            <label for="name">お名前 *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">メールアドレス *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="type">お問い合わせ種別 *</label>
+            <select id="type" name="type" required>
+              <option value="watch">時計について</option>
+              <option value="football">キャリア支援について</option>
+              <option value="recruit">採用について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">内容 *</label>
+            <textarea id="message" name="message" rows="6" required>
+            </textarea>
+          </div>
+          <div class="form-row checkbox">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">
+              <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意する</label>
+          </div>
+          <button class="btn" type="submit">送信</button>
+        </form>
+      </div>
+    </section>
+    <section id="locations" class="section locations">
+      <h2 class="section-title">店舗・オフィスのご案内</h2>
+      <div class="loc-grid">
+        <div class="loc-card">
+          <h3>銀座本店</h3>
+          <p>〒104-0061 東京都中央区銀座1-2-3</p>
+          <p>営業時間：11:00-20:00（年中無休）</p>
+          <ul class="loc-channels">
+            <li>
+              <a href="tel:+81312345678">☎ 03-1234-5678</a>
+            </li>
+            <li>
+              <a href="https://line.me/R/ti/p/@commitginza" target="_blank">LINE</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/commit_ginza" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="loc-card">
+          <h3>オンラインサポート</h3>
+          <p>受付時間：10:00-19:00（平日）</p>
+          <ul class="loc-channels">
+            <li>
+              <a href="tel:+815012345678">☎ 050-1234-5678</a>
+            </li>
+            <li>
+              <a href="mailto:support@commit-watch.co.jp">✉ support@commit-watch.co.jp</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/commit_support" target="_blank">X（旧Twitter）</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="access" class="section access">
+      <h2 class="section-title">アクセスマップ</h2>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_PARAMS" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="route-guide">
+        <h3>最寄り駅からのルート</h3>
+        <ol>
+          <li>東京メトロ有楽町線「銀座一丁目駅」3 番出口を出る</li>
+          <li>中央通りを北へ徒歩2分</li>
+          <li>左手の●●ビル 1F が当店です</li>
+        </ol>
+        <a class="btn" href="https://goo.gl/maps/xxxx" target="_blank">Google マップで開く</a>
+      </div>
+    </section>
+    <section id="faq" class="section faq">
+      <h2 class="section-title">よくあるご質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Q. 取り置きはできますか？</button>
+          <div class="faq-a">A. 店頭での取り置きは原則行っておりませんが、
+            <br>オンライン決済後の発送スケジュール調整は可能です。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 海外発送は対応していますか？</button>
+          <div class="faq-a">A. 米国・EU など 20 ヵ国へ発送実績があります。
+            <br>送料と関税はお見積のうえご案内いたします。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. LINE で査定は依頼できますか？</button>
+          <div class="faq-a">A. 可能です。LINE 公式アカウントのメニューから
+            <br>商品画像を送付してください。</div>
+        </div>
+      </div>
+    </section>
+    <script>
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        btn.classList.toggle('open');
+        btn.nextElementSibling.classList.toggle('show');
+      });
+    });
+    </script>
+  </main>
+  <footer class="footer-dark-custom">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/commit-group-logo.png?v=1754373673" alt="Commit Group" class="footer-logo">
+      </div>
+      <div class="footer-sns-grid">
+        <div>
+          <span class="sns-label">コミット銀座</span>
+          <div class="sns-block">
+            <a href="https://x.com/commit_ginza" aria-label="Commit Ginza on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/commit_ginza" aria-label="Commit Ginza on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">フットボールアシスト</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">大津祐樹</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">Cielo8</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="about.html">会社概要</a>
+          </li>
+          <li>
+            <a href="service.html">事業紹介</a>
+          </li>
+          <li>
+            <a href="works.html">掲載実績</a>
+          </li>
+          <li>
+            <a href="news.html">ニュース</a>
+          </li>
+          <li>
+            <a href="recruit.html">採用情報</a>
+          </li>
+          <li>
+            <a href="contact.html">お問い合わせ</a>
+          </li>
+          <li>
+            <a href="terms.html">利用規約</a>
+          </li>
+          <li>
+            <a href="privacy.html">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </nav>
+      <small class="footer-copy">©
+        <script>
+  document.write(new Date().getFullYear())
+        </script> Commit Group Ltd.</small>
+    </div>
+  </footer>
+</body>
+</html>

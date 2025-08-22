@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>株式会社コミット｜Commit Group</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+  <header class="site-header">
+    <div class="header-top">
+      <label for="burger-toggle" class="burger" aria-label="menu">
+        <span>
+        </span>
+      </label>
+      <div class="brand">
+        <a href="index.html">
+          <img src="commit-group-logo.png" alt="Commit Group logo">
+        </a>
+      </div>
+    </div>
+    <nav class="primary-nav">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="drawer">
+      <ul>
+        <li>
+          <a href="about.html">会社概要</a>
+        </li>
+        <li>
+          <a href="service.html">事業紹介</a>
+        </li>
+        <li>
+          <a href="ceo-message.html">代表挨拶</a>
+        </li>
+        <li>
+          <a href="works.html">掲載実績</a>
+        </li>
+        <li>
+          <a href="news.html">ニュース</a>
+        </li>
+        <li>
+          <a href="recruit.html">採用情報</a>
+        </li>
+        <li>
+          <a href="contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <label for="burger-toggle" class="drawer-overlay" aria-hidden="true">
+  </label>
+  <main>
+    <section class="hero-video">
+      <video src="hero__bg__video.mp4" poster="commit-group-logo.png" autoplay muted loop playsinline>
+      </video>
+      <div class="hero-inner">
+        <h1 class="hero-title">魅せる。支える。彩る。</h1>
+        <p class="hero-lead">時計で時間を、スポーツで夢を、食と花で日常を豊かに。Commit Group は、3つの情熱で未来価値をデザインします。</p>
+        <a href="service.html" class="hero-btn">事業を見る</a>
+      </div>
+    </section>
+    <section class="services-modern">
+      <div class="heading-block">
+        <span class="heading-bg">BUSINESS</span>
+        <h2 class="heading-main">BUSINESS</h2>
+        <p class="heading-sub">事業領域</p>
+      </div>
+      <section class="group-synergy" aria-labelledby="synergy-title">
+            <header class="synergy-hero">
+              <p class="eyebrow">グループシナジー</p>
+              <h2 id="synergy-title">ラグジュアリーとライフスタイルの融合へ</h2>
+              <p class="lead">
+                スポーツ事業「Football Assist」と共に、多面的な体験価値の創出を推進。
+                時計・スポーツ・飲食・花という多角的な接点で“本物志向”の顧客により深いライフスタイル価値を提供します。
+              </p>
+            </header>
+          
+            <!-- 相互関係（シナジー）図 -->
+            <figure class="synergy-diagram-figure">
+              <figcaption class="sr-only">時計・人材派遣・飲食・花の4事業が完全相互に連携するシナジー図</figcaption>
+              <div class="synergy-diagram">
+                <svg viewBox="0 0 420 280" width="100%" preserveAspectRatio="xMidYMid meet" aria-label="Group Synergy">
+                  <line x1="160" y1="70" x2="100" y2="110" class="link" marker-end="url(#arrow)"></line>
+                  <line x1="260" y1="70" x2="320" y2="110" class="link" marker-end="url(#arrow)"></line>
+                  <line x1="210" y1="110" x2="210" y2="170" class="link" marker-end="url(#arrow)"></line>
+                  <line x1="110" y1="140" x2="310" y2="140" class="link" marker-end="url(#arrow)"></line>
+                  <line x1="100" y1="170" x2="160" y2="220" class="link" marker-end="url(#arrow)"></line>
+                  <line x1="320" y1="170" x2="260" y2="220" class="link" marker-end="url(#arrow)"></line>
+                  <g transform="translate(60,140)">
+                    <circle r="50" class="node-circle"></circle>
+                    <text text-anchor="middle" class="node-label">
+                      <tspan x="0" dy="-4">時計事業</tspan>
+                      <tspan x="0" dy="20" class="node-sub">Commit 銀座</tspan>
+                    </text>
+                  </g>
+              
+                  <g transform="translate(210,60)">
+                    <circle r="50" class="node-circle"></circle>
+                    <text text-anchor="middle" class="node-label">
+                      <tspan x="0" dy="-4">花事業</tspan>
+                      <tspan x="0" dy="20" class="node-sub">cielo8</tspan>
+                    </text>
+                  </g>
+              
+                  <g transform="translate(360,140)">
+                    <circle r="50" class="node-circle"></circle>
+                    <text text-anchor="middle" class="node-label">
+                      <tspan x="0" dy="-4">飲食事業</tspan>
+                      <tspan x="0" dy="20" class="node-sub">cielo8</tspan>
+                    </text>
+                  </g>
+              
+                  <g transform="translate(210,220)">
+                    <circle r="50" class="node-circle"></circle>
+                    <text text-anchor="middle" class="node-label">
+                      <tspan x="0" dy="-4">人材派遣／スポーツ事業</tspan>
+                      <tspan x="0" dy="20" class="node-sub">Football Assist</tspan>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </figure>
+          
+            <section class="group-intro">
+              <h2>買収およびグループ化の背景</h2>
+              <p>
+                高級腕時計の販売・買取を行う株式会社コミット（本社：東京都中央区）は、飲食事業および花事業を展開する
+                <a href="https://cielo8.jp/" target="_blank" rel="noopener">cielo8（シエロエイト）</a>
+                の買収契約を締結し、当社グループに迎え入れました。2024年には、学生アスリート支援やスポーツイベント企画を行う
+                <a href="https://assist-sports.com/" target="_blank" rel="noopener">Football Assist</a>
+                を買収。感性に訴える“食”と“花”、挑戦を後押しする“スポーツ”、資産性と審美性の“時計”を繋ぎ、
+                ラグジュアリーとライフスタイルの融合を推進します。
+              </p>
+            </section>
+          
+            <section class="services-grid" aria-label="事業一覧">
+              <div>
+                <article class="service-card">
+                  <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/2407grqw_COMMIT_GINZA_06_M-1024x.jpg?v=1754382899" alt="コミット銀座">
+                  <div class="card-meta">
+                    <h3 class="card-title">時計事業</h3>
+                    <p class="card-text">高級腕時計専門店として、審美性と資産性の高い商材の販売・買取を展開。体験価値の強化を目的に事業領域を拡大。</p>
+                    <a href="https://commit-watch.co.jp/" target="_blank" class="card-btn">詳しく</a>
+                  </div>
+                </article>
+                <div class="card-quote">
+                  <blockquote class="quote">
+                    <p>「時計という“時間を象徴するプロダクト”を通じて、価値ある物・瞬間を提供してきました。cielo8との統合により、その価値をより多面的に表現していきます。」</p>
+                    <footer>— 株式会社コミット銀座 代表取締役 <b>幸田 卓朗</b></footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div>
+                <article class="service-card">
+                  <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/mv_slide_01.jpg?v=1754382953" alt="フットボールアシスト">
+                  <div class="card-meta">
+                    <h3 class="card-title">人材派遣／スポーツ事業</h3>
+                    <p class="card-text">「スポーツの力で人生に可能性を」。学生アスリート支援、キャリア支援、クラブ運営、イベント企画を展開。</p>
+                    <a href="https://assist-sports.com/" target="_blank" class="card-btn">詳しく</a>
+                  </div>
+                </article>
+                <div class="card-quote">
+                  <blockquote class="quote">
+                    <p>「スポーツは人を動かし、心を熱くする。今後は“スポーツ×ライフスタイル”で感動体験の場づくりに挑戦。cielo8との連携で新たな可能性を拓きます。」</p>
+                    <footer>— Football Assist 代表取締役 <b>大津 祐樹</b></footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div>
+                <article class="service-card">
+                  <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/s-2400x1602_v-frms_webp_f1407009.jpg?v=1754382906" alt="Cielo8">
+                  <div class="card-meta">
+                    <h3 class="card-title">飲食事業</h3>
+                    <p class="card-text">レストラン／ケータリングを中心に「食 × 花 × 空間」の融合で独自のブランド体験を提供。上質な時間を求める顧客から高評価。</p>
+                    <a href="https://cielo8.jp/" target="_blank" class="card-btn">詳しく</a>
+                  </div>
+                </article>
+                <div class="card-quote">
+                  <blockquote class="quote">
+                    <p>「“その場の空気を豊かにする力”をもっと多くの人へ。コミット銀座の思想と融合し、時計・スポーツとの掛け算で体験型価値を創造します。」</p>
+                    <footer>— cielo8 代表取締役 <b>板垣 亮</b></footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div>
+                <article class="service-card">
+                  <img src="flower_ai.jpg" alt="Cielo8">
+                  <div class="card-meta">
+                    <h3 class="card-title">花事業</h3>
+                    <p class="card-text">フラワーアレンジメントや空間演出でイベント価値を増幅。食と花の一体設計で“五感に訴える体験”を構築。</p>
+                    <a href="https://cielo8.jp/" target="_blank" class="card-btn">詳しく</a>
+                  </div>
+                </article>
+                <div class="card-quote">
+                  <blockquote class="quote">
+                    <p>「“その場の空気を豊かにする力”をもっと多くの人へ。コミット銀座の思想と融合し、時計・スポーツとの掛け算で体験型価値を創造します。」</p>
+                    <footer>— cielo8 代表取締役 <b>板垣 亮</b></footer>
+                  </blockquote>
+                </div>
+              </div>
+            </section>
+          
+            <!-- まとめ -->
+            <section class="closing">
+              <h2>提供価値の拡張</h2>
+              <p>
+                本買収により、時計・スポーツ・飲食・花の4ドメインが相互に連動。顧客接点を立体化し、上質な“体験価値”を継続的に届けてまいります。
+              </p>
+            </section>
+        </section>
+    </section>
+    <section class="latest-news">
+      <div class="heading-block">
+        <span class="heading-bg">COMMIT GROUP IN NUMBERS</span>
+        <h2 class="heading-main">COMMIT GROUP IN NUMBERS</h2>
+        <p class="heading-sub">コミットグループの数値</p>
+      </div>
+      <div class="number-cards">
+        <div class="number-card">
+          <h3 class="num">24.1</h3>
+          <p class="label">グループ売上(B/年)</p>
+        </div>
+        <div class="number-card">
+          <h3 class="num">3</h3>
+          <p class="label">事業ブランド</p>
+        </div>
+        <div class="number-card">
+          <h3 class="num">45</h3>
+          <p class="label">正社員</p>
+        </div>
+        <div class="number-card">
+          <h3 class="num">98
+            <span>%</span>
+          </h3>
+          <p class="label">顧客満足度(%)</p>
+        </div>
+      </div>
+    </section>
+    <section class="latest-news">
+      <div class="heading-block">
+        <span class="heading-bg">NEWS</span>
+        <h2 class="heading-main">NEWS</h2>
+        <p class="heading-sub">最新ニュース</p>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2025.06.12</span>
+          <a href="#" class="news-body">インスタグラム新規アカウントを開設いたしました！！</a>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.06.07</span>
+          <a href="#" class="news-body">日曜日・祝日における営業時間変更のお知らせ</a>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.05.29</span>
+          <a href="#" class="news-body">弊社名・商品画像を無断使用した偽サイトにご注意ください</a>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.04.02</span>
+          <a href="#" class="news-body">12:00~12:30の間に起きたシステム一部不具合について</a>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.03.10</span>
+          <a href="#" class="news-body">【2025年2月度版】 直近の高額販売実績を大公開！！</a>
+        </li>
+      </ul>
+    </section>
+    <section class="rich-text--full-width section--accent">
+      <div class="rich-text__wrapper">
+        <h2 class="rich-text__heading">時計も、キャリアも、日常も——</h2>
+        <p class="rich-text__text">高級時計の「売る・買う」、アスリートのセカンドキャリア支援、
+          <br>そして食と花で彩るライフスタイル提案。
+          <br>私たちグループがあなたの“次の一歩”を伴走します。</p>
+        <a href="contact.html" class="hero-btn">ご相談・お問い合わせ</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-dark-custom">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://cdn.shopify.com/s/files/1/0518/4844/6114/files/commit-group-logo.png?v=1754373673" alt="Commit Group" class="footer-logo">
+      </div>
+      <div class="footer-sns-grid">
+        <div>
+          <span class="sns-label">コミット銀座</span>
+          <div class="sns-block">
+            <a href="https://x.com/commit_ginza" aria-label="Commit Ginza on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/commit_ginza" aria-label="Commit Ginza on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">フットボールアシスト</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">大津祐樹</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="sns-label">Cielo8</span>
+          <div class="sns-block">
+            <a href="https://x.com/football_assist" aria-label="Football Assist on X" class="sns-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/football_assist" aria-label="Football Assist on Instagram" class="sns-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@commitginza" aria-label="Commit Ginza on YouTube" class="sns-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="about.html">会社概要</a>
+          </li>
+          <li>
+            <a href="service.html">事業紹介</a>
+          </li>
+          <li>
+            <a href="works.html">掲載実績</a>
+          </li>
+          <li>
+            <a href="news.html">ニュース</a>
+          </li>
+          <li>
+            <a href="recruit.html">採用情報</a>
+          </li>
+          <li>
+            <a href="contact.html">お問い合わせ</a>
+          </li>
+          <li>
+            <a href="terms.html">利用規約</a>
+          </li>
+          <li>
+            <a href="privacy.html">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </nav>
+      <small class="footer-copy">©
+        <script>
+  document.write(new Date().getFullYear())
+        </script>Commit Group Ltd.</small>
+    </div>
+  </footer>
+</body>
+</html>
