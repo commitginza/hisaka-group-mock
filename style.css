@@ -4204,4 +4204,34 @@ nav ul,
   text-align:center;
 }
 
+/* ====== Affiliated Organizations（関連団体）を確実に表示 ====== */
+.services-modern { position: relative; z-index: 0; }
+.services-modern .services-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px);
+  margin-top: clamp(12px, 2vw, 20px);
+}
+@media (max-width: 1024px){
+  .services-modern .services-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px){
+  .services-modern .services-grid{ grid-template-columns: 1fr; }
+}
+
+/* カードと画像が高さ0にならないように */
+.service-card{ display:flex; flex-direction:column; min-height: 1px; }
+.service-card img{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;    /* 画像比率がまちまちでも安定 */
+  object-fit: cover;
+  display: block;
+}
+.card-meta{ display:flex; flex-direction:column; gap:.5rem; }
+
+/* ====== 会長セクションの背景が他セクションに被らないよう隔離 ====== */
+#chairman-message{ position: relative; isolation: isolate; }
+#chairman-message .message-hero__bg{ z-index: -1; } /* セクション内だけの背景に固定 */
+
 
