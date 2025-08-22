@@ -576,7 +576,7 @@ footer a {
 }
 
 .footer-dark-custom {
-  background: #222;
+  background: #000;
   color: #d1d1d1;
   text-align: center;
   padding: 4rem 1rem 2.5rem
@@ -4203,3 +4203,4 @@ nav ul,
 .rich-text--full-width-cta {
   text-align:center;
 }
+
