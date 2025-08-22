@@ -4084,3 +4084,66 @@ nav ul,
     margin-inline: auto;                      /* 画像を中央表示 */
   }
 }
+
+/* ===== Chairman message: no card, 2-column, readable text ===== */
+
+/* セクション自体は背景や影をなくす */
+#chairman-message {
+  background: transparent !important;
+}
+
+/* 見出しと本文の文字色をはっきり（section--accent が白字にしている想定を打ち消し） */
+#chairman-message .rich-text__heading,
+#chairman-message .chairman-text,
+#chairman-message .chairman-text p {
+  color: #111 !important;
+}
+
+/* 2カラムレイアウト。カード化していた装飾は全部OFF */
+#chairman-message .chairman-message {
+  display: grid;
+  grid-template-columns: clamp(260px, 34vw, 420px) 1fr; /* 左画像 / 右テキスト */
+  gap: clamp(16px, 3vw, 40px);
+  align-items: start;
+  padding: 0;                /* ← 影付きカードの余白を解除 */
+  background: transparent;   /* ← 背景白を解除 */
+  border-radius: 0;          /* ← 角丸を解除 */
+  box-shadow: none;          /* ← 影を解除 */
+}
+
+/* 見出しの余白とトーン（中央寄せならお好みで） */
+#chairman-message .rich-text__heading {
+  margin: 0 0 .75rem;
+  font-weight: 900;
+  text-align: left;          /* 中央寄せが邪魔なら左寄せへ */
+}
+
+/* 画像は縦ポートレートで美しくトリミング */
+#chairman-message .chairman-photo {
+  margin: 0;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 12px;       /* 角丸は残す。不要なら 0 に */
+  background: #eee;
+}
+#chairman-message .chairman-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 右側テキストの読みやすさ */
+#chairman-message .chairman-text { 
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+/* スマホでは縦積み */
+@media (max-width: 840px) {
+  #chairman-message .chairman-message {
+    grid-template-columns: 1fr;
+  }
+  #chairman-message .rich-text__heading { text-align: center; }
+  #chairman-message .chairman-photo { max-width: 420px; margin-inline: auto; }
+}
